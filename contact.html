@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Lusaca Insurance</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #003366;
+            --accent: #ff6b00;
+            --light: #f4f6f9;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        body { background-color: var(--light); color: #333; }
+        
+        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--accent); }
+
+        .container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        h1 { color: var(--primary); text-align: center; margin-bottom: 2rem; }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            transition: 0.3s;
+        }
+        .contact-item:hover { background: #f9f9f9; padding-left: 2rem; }
+        
+        .icon-box {
+            width: 50px; height: 50px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-right: 1.5rem;
+        }
+
+        .details h3 { font-size: 0.9rem; color: #888; text-transform: uppercase; margin-bottom: 0.3rem; }
+        .details p { font-size: 1.1rem; font-weight: bold; color: var(--primary); }
+        .details a { text-decoration: none; color: var(--primary); }
+
+        .btn-home {
+            display: block; width: 100%; text-align: center; margin-top: 2rem;
+            color: #666; text-decoration: none; font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media(max-width: 600px) {
+            .container { margin: 1rem; padding: 1rem; }
+            .details p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">LUSACA<span>.</span></a>
+    </nav>
+
+    <div class="container">
+        <h1>Get in Touch</h1>
+        <p style="text-align: center; margin-bottom: 2rem; color: #666;">Reach out for immediate assistance with claims or quotes.</p>
+
+        <div class="contact-item">
+            <div class="icon-box"><i class="fas fa-phone"></i></div>
+            <div class="details">
+                <h3>Call Us</h3>
+                <p><a href="tel:+254731493051">+254 731 493 051</a></p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+            <div class="details">
+                <h3>Email Us</h3>
+                <p><a href="mailto:lusacainsagency@gmail.com">lusacainsagency@gmail.com</a></p>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-home">← Back to Home Page</a>
+    </div>
+
+</body>
+</html>
