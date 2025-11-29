@@ -3,218 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lusaca Insurance Agency | Your Trusted Kenyan Broker</title>
-    <!-- Social Media Tags -->
-    <meta property="og:title" content="Lusaca Insurance Agency | 15+ Years Experience in Kenya">
-    <meta property="og:description" content="Your trusted insurance intermediary in Kenya. Negotiated rates with Britam, CIC, Sanlam, and specialist in fast claim recovery.">
-    <meta property="og:type" content="website">
-
+    <title>Lusaca Insurance Agency | Premium Kenyan Brokerage</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Professional Teal & Gold Palette */
         :root {
-            --primary: #00897b;       /* Teal - Trust, Growth, Wealth */
-            --dark-primary: #004d40;  /* Dark Teal - Authority, Footer */
-            --accent: #ff6f00;        /* Amber/Gold - CTA, Energy */
-            --light-bg: #e0f2f1;      /* Light Mint/Teal Background */
-            --text-dark: #37474f;     /* Dark Grey Text */
-            --white: #ffffff;
+            --primary: #111111;
+            --secondary: #1e293b;
+            --accent: #D4AF37;
+            --highlight: #C2185B;
+            --text: #f8f8f8;
+            --text-secondary: #aaaaaa;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        
-        body { background-color: var(--light-bg); color: var(--text-dark); line-height: 1.6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
+        body { background-color: var(--primary); color: var(--text); line-height: 1.6; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         section { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
         
         /* NAVIGATION */
-        nav {
-            background: var(--white);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo { font-size: 1.8rem; font-weight: 900; color: var(--dark-primary); letter-spacing: -1px; }
-        .logo span { color: var(--accent); }
-        
+        nav { background: var(--primary); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--highlight); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--accent); letter-spacing: 1px; }
+        .logo span { color: var(--highlight); }
         .nav-links { display: flex; gap: 2rem; }
-        .nav-links a { font-weight: 600; color: var(--text-dark); font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--primary); }
+        .nav-links a { font-weight: 500; color: var(--text); font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--accent); }
         
-        .btn-nav {
-            background: var(--accent);
-            color: white !important;
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-weight: bold;
-        }
-        .btn-nav:hover { background: #e65100; }
+        .btn-nav { background: var(--accent); color: var(--primary) !important; padding: 0.5rem 1.2rem; border-radius: 5px; font-weight: bold; }
+        .btn-nav:hover { background: var(--highlight); color: var(--text) !important; }
 
         /* HERO SECTION */
         .hero {
-            background: linear-gradient(rgba(0, 77, 64, 0.85), rgba(0, 137, 123, 0.8)), 
-                url('https://images.unsplash.com/photo-1544837267-27b958801d0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 8rem 5% 6rem;
-            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(17, 17, 17, 0.8)), 
+                url('https://images.unsplash.com/photo-1517436340263-d48e83344b1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); 
+            background-size: cover; background-position: center; text-align: center; padding: 6rem 5%;
         }
-
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 2.5rem; opacity: 0.95; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; font-weight: 800; color: var(--accent); }
+        .hero p { font-size: 1.3rem; max-width: 800px; margin: 0 auto 2.5rem; color: var(--text-secondary); }
         
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 2.5rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-        .hero-stat h3 { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent); }
-        .hero-stat p { font-size: 0.9rem; opacity: 0.8; }
+        .usp-grid { display: flex; justify-content: center; gap: 3rem; margin-top: 3rem; flex-wrap: wrap; }
+        .usp-item { border: 1px solid var(--accent); padding: 1rem 2rem; border-radius: 50px; font-size: 0.9rem; }
+        .usp-item i { color: var(--highlight); margin-right: 0.5rem; }
 
         /* PARTNERS SECTION */
-        .partners-section {
-            background: var(--white);
-            text-align: center;
-            padding: 2rem 5%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        .partners-section p { font-weight: bold; color: #999; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 1rem; }
-        .partner-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            font-weight: 800;
-            font-size: 1.2rem;
-            color: var(--dark-primary);
-            opacity: 0.7;
-        }
+        .partners-section { background: var(--secondary); text-align: center; padding: 2rem 5%; }
+        .partners-section p { font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .partner-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 2.5rem; font-weight: 800; font-size: 1.2rem; color: var(--accent); opacity: 0.8; }
 
-        /* SERVICES SECTION */
-        .section-title { text-align: center; margin-bottom: 3rem; color: var(--dark-primary); font-size: 2.2rem; }
-        
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s;
-            border-top: 5px solid var(--primary);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        
-        .icon {
-            width: 70px; height: 70px;
-            background: var(--light-bg);
-            color: var(--primary);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.8rem;
-            margin: 0 auto 1.5rem;
-        }
-        .service-card h3 { margin-bottom: 1rem; color: var(--dark-primary); }
-        .service-card p { color: #666; font-size: 0.95rem; }
-
-        /* CLAIM RECOVERY / VALUE PROP SECTION */
-        .value-prop {
-            background-color: var(--dark-primary);
-            color: var(--white);
-            padding: 5rem 5%;
-            text-align: center;
-        }
-        .value-prop h2 { font-size: 2.5rem; margin-bottom: 2rem; }
-        .value-prop p { max-width: 800px; margin: 0 auto 2.5rem; opacity: 0.9; }
-
-        .recovery-story {
-            background: var(--accent);
-            color: var(--dark-primary);
-            padding: 1.5rem;
-            border-radius: 10px;
-            max-width: 700px;
-            margin: 2rem auto 0;
-            text-align: left;
-            font-size: 1.1rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        .recovery-story strong { color: var(--white); }
-        
-        /* CONTACT/CTA SECTION */
-        .contact-cta {
-            background: var(--white);
-            text-align: center;
-            padding: 4rem 5%;
-        }
-        .contact-cta h2 { color: var(--primary); font-size: 2rem; margin-bottom: 1rem; }
-        
-        .cta-buttons-final { margin-top: 2rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
-        .btn-call { background: var(--dark-primary); color: white; padding: 1rem 2rem; border-radius: 5px; font-weight: bold; }
-        .btn-call:hover { background: var(--primary); }
-        .btn-email { border: 2px solid var(--primary); color: var(--primary); padding: 1rem 2rem; border-radius: 5px; font-weight: bold; }
-        .btn-email:hover { background: var(--light-bg); }
+        /* CONTACT CTA */
+        .cta-footer { background: var(--dark-primary); text-align: center; padding: 3rem 5%; }
+        .cta-footer h2 { color: var(--accent); font-size: 2rem; margin-bottom: 1.5rem; }
+        .btn-contact { background: var(--highlight); color: var(--text); padding: 1rem 2rem; border-radius: 5px; font-weight: bold; font-size: 1.1rem; }
+        .btn-contact:hover { background: var(--accent); color: var(--primary); }
 
         /* FOOTER */
-        footer { background: #222; color: #999; padding: 2rem; text-align: center; font-size: 0.9rem; }
+        footer { background: var(--primary); color: #555; padding: 2rem; text-align: center; font-size: 0.9rem; border-top: 1px solid var(--secondary); }
 
-        /* MOBILE OPTIMIZATION */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
-            .hero-stats { gap: 1.5rem; }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <nav>
         <div class="logo">LUSACA<span>.</span></div>
         <div class="nav-links">
-            <a href="#services">Coverage</a>
-            <a href="#value-prop">Why Us</a>
-            <a href="#contact">Get Quote</a>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="btn-nav">Get Quote</a>
         </div>
-        <a href="contact.html" class="btn-nav">Contact Us</a>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="hero">
-        <h1>Your Independent Insurance Partner in Kenya</h1>
-        <p>Lusaca is your trusted intermediary for General, Life, and Health Insurance. We negotiate competitive rates and guarantee peace of mind with fast claim settlements.</p>
+        <h1>Premium Protection in a Complex World</h1>
+        <p>Your expert intermediary with over 15 years of experience in General, Life, and Health Insurance. We negotiate competitive rates and guarantee fast, reliable claim settlements.</p>
         
-        <a href="#contact" class="btn-nav" style="background: var(--accent); font-size: 1.1rem; padding: 1rem 3rem;">Get Expert Advice Now</a>
+        <a href="contact.html" class="btn-nav" style="background: var(--accent); font-size: 1.1rem; padding: 1rem 3rem;">Start Your Quote</a>
         
-        <div class="hero-stats">
-            <div class="hero-stat">
-                <h3>15+ Years</h3>
-                <p>Industry Experience</p>
-            </div>
-            <div class="hero-stat">
-                <h3>Negotiated</h3>
-                <p>Best Market Rates</p>
-            </div>
-            <div class="hero-stat">
-                <h3>Fast</h3>
-                <p>Claim Settlement</p>
-            </div>
+        <div class="usp-grid">
+            <div class="usp-item"><i class="fas fa-gavel"></i> Claim Recovery Specialists</div>
+            <div class="usp-item"><i class="fas fa-certificate"></i> 15+ Years of Trust</div>
+            <div class="usp-item"><i class="fas fa-handshake"></i> Unbiased Negotiated Rates</div>
         </div>
     </section>
 
-    <!-- PARTNERS LIST -->
     <div class="partners-section">
         <p>Negotiated Rates with Major Carriers</p>
         <div class="partner-list">
@@ -227,73 +100,14 @@
         </div>
     </div>
 
-    <!-- SERVICES SECTION -->
-    <section id="services">
-        <h2 class="section-title">Comprehensive Coverage for Modern Life</h2>
-        <div class="service-grid">
-            
-            <div class="service-card">
-                <div class="icon"><i class="fas fa-car"></i></div>
-                <h3>General & Motor Insurance</h3>
-                <p>Protection for all assets, including private vehicles, commercial fleets, and property. We handle the complexities of paperwork and police abstracts.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="icon"><i class="fas fa-heartbeat"></i></div>
-                <h3>Health Insurance</h3>
-                <p>Access customized medical covers through partnerships with leading providers like Old Mutual. Find the best scheme for your family or business.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon"><i class="fas fa-umbrella"></i></div>
-                <h3>Life & Retirement</h3>
-                <p>Secure your future and the financial stability of your loved ones with tailored life insurance products and long-term planning.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- VALUE PROPOSITION / CLAIM STORY -->
-    <section id="value-prop" class="value-prop">
-        <h2>The Lusaca Intermediary Advantage</h2>
-        <p>We are your dedicated advocate. With 15 years in the Nairobi market, we know that getting claims paid requires more than just submitting a form. We provide fast involvement in new products and expert advice, always prioritizing your interests.</p>
-
-        <div class="recovery-story">
-            <i class="fas fa-gavel" style="float: right; font-size: 1.5rem; color: white;"></i>
-            <h4 style="margin-bottom: 0.5rem; color: var(--white);">Specialist: Third-Party Claim Recovery</h4>
-            <p>Our hard work is proven in third-party claims. While others retreat, we pursue justice. Example: **We successfully secured full recovery for a client's vehicle damage, even after the opposing insurer initially denied liability.** This is the Lusaca commitment.</p>
-        </div>
-    </section>
-
-    <!-- CONTACT CTA SECTION -->
-    <section id="contact" class="contact-cta">
-        <h2>Ready for Clear Insurance Advice?</h2>
-        <p style="color: #666;">Reach out for a zero-obligation consultation or quote.</p>
-        <p style="color: var(--dark-primary); font-weight: bold; margin-top: 1.5rem;">Lusaca Insurance Agency, Nairobi, Kenya</p>
-        
-        <div class="cta-buttons-final">
-            <a href="tel:+254731493051" class="btn-call"><i class="fas fa-phone"></i> Call: +254 731 493 051</a>
-            <a href="mailto:lusacainsagency@gmail.com" class="btn-email"><i class="fas fa-envelope"></i> Email Us</a>
-        </div>
+    <section class="cta-footer">
+        <h2>Ready for a Premium Brokerage Experience?</h2>
+        <a href="contact.html" class="btn-contact"><i class="fas fa-envelope"></i> Contact Us Today</a>
     </section>
 
     <footer>
-        &copy; 2025 Lusaca Insurance Agency. All rights reserved. | Powered by GitHub Pages.
+        &copy; 2025 Lusaca Insurance Agency. Nairobi, Kenya.
     </footer>
-
-    <script>
-        // Smooth scrolling for internal anchors
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
 
 </body>
 </html>
