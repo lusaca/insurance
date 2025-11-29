@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusaca Insurance | Coverage Details</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* CSS from index.html repeated for consistency */
+        :root {
+            --primary: #111111;
+            --secondary: #1e293b;
+            --accent: #D4AF37;
+            --highlight: #C2185B;
+            --text: #f8f8f8;
+            --text-secondary: #aaaaaa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
+        body { background-color: var(--primary); color: var(--text); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        section { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        
+        /* NAVIGATION */
+        nav { background: var(--primary); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--highlight); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--accent); letter-spacing: 1px; }
+        .logo span { color: var(--highlight); }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { font-weight: 500; color: var(--text); font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--accent); }
+        .btn-nav { background: var(--accent); color: var(--primary) !important; padding: 0.5rem 1.2rem; border-radius: 5px; font-weight: bold; }
+        .btn-nav:hover { background: var(--highlight); color: var(--text) !important; }
+
+        /* PAGE HEADER */
+        .page-header { background-color: var(--secondary); text-align: center; padding: 3rem 5%; margin-bottom: 2rem; border-bottom: 5px solid var(--accent); }
+        .page-header h1 { color: var(--text); font-size: 2.5rem; margin-bottom: 0.5rem; }
+        
+        /* SERVICE CARDS */
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { background: var(--secondary); padding: 2rem; border-radius: 10px; border-left: 5px solid var(--highlight); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .service-card h2 { color: var(--accent); margin-bottom: 1rem; font-size: 1.8rem; }
+        .service-card p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .service-card ul { list-style: none; padding-left: 0; }
+        .service-card ul li { margin-bottom: 0.5rem; color: var(--text); }
+        .service-card ul li i { color: var(--highlight); margin-right: 0.5rem; }
+
+        /* FOOTER */
+        footer { background: var(--primary); color: #555; padding: 2rem; text-align: center; font-size: 0.9rem; border-top: 1px solid var(--secondary); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">LUSACA<span>.</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html" style="color: var(--accent);">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="btn-nav">Get Quote</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Your Comprehensive Coverage Options</h1>
+        <p style="color: var(--text-secondary);">We broker deals across General, Life, and Health sectors to provide solutions unavailable to the public.</p>
+    </div>
+
+    <section class="service-grid">
+        <div class="service-card">
+            <h2><i class="fas fa-car"></i> Motor & General</h2>
+            <p>From private V8 cruisers to large commercial fleets, secure your assets against damage, theft, and liability risks. Our expertise ensures quick claim filing and accurate assessment.</p>
+            <ul>
+                <li><i class="fas fa-check"></i> Comprehensive Vehicle Cover</li>
+                <li><i class="fas fa-check"></i> Third-Party Claim Management</li>
+                <li><i class="fas fa-check"></i> Fire and Burglary Protection</li>
+                <li><i class="fas fa-check"></i> Commercial Property Insurance</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h2><i class="fas fa-heartbeat"></i> Health & Medical</h2>
+            <p>We work with leading carriers like Old Mutual and CIC to tailor medical schemes that suit your family or corporate budget without compromising care quality.</p>
+            <ul>
+                <li><i class="fas fa-check"></i> Customized Corporate Plans</li>
+                <li><i class="fas fa-check"></i> Individual/Family Schemes</li>
+                <li><i class="fas fa-check"></i> Local and International Coverage</li>
+                <li><i class="fas fa-check"></i> Outpatient and Inpatient Benefits</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h2><i class="fas fa-umbrella"></i> Life & Investment</h2>
+            <p>Plan for the long term with flexible life insurance and wealth creation products. Ensure your legacy and financial promises are protected.</p>
+            <ul>
+                <li><i class="fas fa-check"></i> Term and Whole Life Policies</li>
+                <li><i class="fas fa-check"></i> Education and Retirement Planning</li>
+                <li><i class="fas fa-check"></i> Key Man Business Policies</li>
+                <li><i class="fas fa-check"></i> Unbiased Investment Advice</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Lusaca Insurance Agency. Nairobi, Kenya.
+    </footer>
+
+</body>
+</html>
