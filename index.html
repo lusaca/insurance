@@ -6,135 +6,148 @@
     <title>Lusaca Insurance Agency | Premium Kenyan Broker</title>
     <meta property="og:title" content="Lusaca Insurance Agency | 15+ Years Experience in Kenya">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <style>
-        /* High-Contrast White/Gold Palette */
+        /* High-Contrast White/Gold/Black Palette */
         :root {
             --primary: #ffffff;      /* White - Main Background */
-            --secondary: #f0f0f0;    /* Light Gray - Card/Section backgrounds */
-            --accent: #D4AF37;       /* Classic Gold - Buttons, Highlights */
-            --highlight: #C2185B;    /* Rose/Pink - Hint of Pink */
-            --text: #111111;         /* Deep Black - Main Body Text */
-            --text-secondary: #444444; /* Dark Gray - Secondary Text */
+            --secondary: #f8f9fa;    /* Very Light Gray - Sections */
+            --accent: #D4AF37;       /* Classic Gold - Highlights, Buttons */
+            --highlight: #C2185B;    /* Rose/Pink - Hover/Accent */
+            --text: #111111;         /* Deep Black - Main Text */
+            --text-secondary: #555555; /* Dark Gray - Secondary Text */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            background-color: var(--primary); 
-            color: var(--text); 
-            line-height: 1.6; 
-            font-family: 'Inter', sans-serif; /* Normal Font */
-        }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; } /* Elegant Font */
+        body { background-color: var(--primary); color: var(--text); line-height: 1.6; font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
-        section { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
         
-        /* NAVIGATION */
-        nav { background: var(--primary); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--secondary); position: sticky; top: 0; z-index: 1000; }
+        /* --- NEW NAVIGATION STYLES --- */
+        /* Top Notification Bar */
+        .top-bar {
+            background-color: var(--text); /* Black background */
+            color: var(--primary); /* White text */
+            padding: 0.6rem 0;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+        }
+        .top-bar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+            display: flex;
+            justify-content: flex-end; /* Align links to the right */
+            gap: 2rem;
+        }
+        .top-bar a { opacity: 0.8; font-weight: 500; transition: 0.3s; }
+        .top-bar a:hover { opacity: 1; color: var(--accent); }
+
+        /* Main Sticky Header */
+        .main-header {
+            background: var(--primary);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0; /* Stick to the top below the notification bar */
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
         .logo { font-size: 1.8rem; font-weight: 900; color: var(--text); letter-spacing: -1px; }
         .logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 2rem; }
-        .nav-links a { font-weight: 600; color: var(--text); font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--highlight); }
-        
-        .btn-nav { background: var(--accent); color: var(--primary) !important; padding: 0.5rem 1.2rem; border-radius: 50px; font-weight: bold; }
-        .btn-nav:hover { background: var(--highlight); color: var(--primary) !important; }
+
+        .btn-nav { 
+            background: var(--accent); color: var(--primary) !important; 
+            padding: 0.8rem 2rem; border-radius: 50px; 
+            font-weight: bold; font-size: 1rem; letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); /* Gold glow */
+        }
+        .btn-nav:hover { background: var(--highlight); box-shadow: 0 4px 15px rgba(194, 24, 91, 0.3); /* Pink glow */ }
 
         /* HERO SECTION */
         .hero {
-            background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95)), 
-                url('https://images.unsplash.com/photo-1544837267-27b958801d0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
-            background-size: cover; background-position: center; text-align: center; padding: 8rem 5% 6rem;
-            color: var(--text); /* Black text on Light BG */
-            border-bottom: 5px solid var(--accent);
+            text-align: center; padding: 8rem 5% 6rem;
+            color: var(--text);
+            border-bottom: 3px solid var(--accent);
+            background: var(--primary);
         }
-
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; font-weight: 700; color: var(--text); }
+        .hero h1 { font-size: 3.8rem; margin-bottom: 1rem; font-weight: 700; color: var(--text); line-height: 1.1; }
         .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 2.5rem; color: var(--text-secondary); }
         
-        .usp-grid { display: flex; justify-content: center; gap: 2.5rem; margin-top: 3rem; flex-wrap: wrap; }
-        .usp-item { border: 1px solid var(--secondary); padding: 0.8rem 1.5rem; border-radius: 50px; font-size: 0.9rem; background: var(--white); box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
-        .usp-item i { color: var(--highlight); margin-right: 0.5rem; }
+        .usp-grid { display: flex; justify-content: center; gap: 2rem; margin-top: 4rem; flex-wrap: wrap; }
+        .usp-item { border: 2px solid #eee; padding: 1rem 1.8rem; border-radius: 50px; font-size: 0.95rem; font-weight: 600; background: var(--primary); display: flex; align-items: center; }
+        .usp-item i { color: var(--highlight); margin-right: 0.8rem; font-size: 1.1rem; }
 
         /* PARTNERS SECTION */
-        .partners-section { background: var(--secondary); text-align: center; padding: 2rem 5%; }
-        .partners-section p { font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--text-secondary); margin-bottom: 1.5rem; }
-        .partner-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 2.5rem; font-weight: 800; font-size: 1.2rem; color: var(--accent); opacity: 0.8; }
+        .partners-section { background: var(--secondary); text-align: center; padding: 3rem 5%; }
+        .partners-section p { font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; color: var(--accent); margin-bottom: 2rem; }
+        .partner-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 3rem; font-weight: 800; font-size: 1.3rem; color: var(--text); opacity: 0.7; }
 
         /* VALUE PROP SECTION */
         .value-prop {
-            background-color: var(--primary); 
-            color: var(--text); /* White Text */
-            padding: 5rem 5%;
+            background-color: var(--primary);
+            color: var(--text);
+            padding: 6rem 5%;
             text-align: center;
         }
-        .value-prop h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 2rem; color: var(--accent); }
+        .value-prop h2 { font-size: 2.8rem; margin-bottom: 2rem; }
+        .value-prop > p { max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: var(--text-secondary); }
+
         .recovery-story {
             background: var(--secondary);
             color: var(--text); 
-            padding: 1.5rem;
-            border-radius: 10px;
-            max-width: 700px;
-            margin: 2rem auto 0;
-            text-align: center;
+            padding: 2.5rem;
+            border-radius: 15px;
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: left;
             font-size: 1.1rem;
-            border-left: 5px solid var(--highlight);
+            border-left: 6px solid var(--highlight);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
-        .recovery-story h4 { color: var(--highlight); }
-
-        /* CONTACT CTA SECTION */
-        .contact-cta { background: var(--primary); text-align: center; padding: 4rem 5%; }
-        .contact-cta h2 { color: var(--text); font-size: 2rem; margin-bottom: 1rem; }
-        
-        .cta-buttons-final { margin-top: 2rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
-        .btn-call { background: var(--text); color: var(--primary); padding: 1rem 2rem; border-radius: 5px; font-weight: bold; }
-        .btn-email { border: 2px solid var(--accent); color: var(--accent); padding: 1rem 2rem; border-radius: 5px; font-weight: bold; }
+        .recovery-story h4 { color: var(--highlight); font-size: 1.3rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; }
 
         /* FOOTER */
-        footer { background: var(--text); color: var(--text-secondary); padding: 2rem; text-align: center; font-size: 0.9rem; }
+        footer { background: var(--text); color: var(--text-secondary); padding: 3rem 5%; text-align: center; font-size: 0.9rem; }
+        footer p { color: #888; }
 
+        /* MOBILE OPTIMIZATION */
         @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    
-    /* NEW MOBILE NAVIGATION RULE */
-    nav { flex-direction: column; align-items: flex-start; }
-    .nav-links { 
-        display: flex; /* Ensure links are visible */
-        flex-direction: column; /* Stacks links vertically */
-        width: 100%;
-        gap: 10px; /* Space out the links */
-        margin-top: 10px;
-        padding-top: 10px;
-        border-top: 1px solid var(--secondary);
-    }
-    .nav-links a { 
-        padding: 5px 0; /* Makes touch target bigger */
-    }
-}
+            .top-bar-container { justify-content: center; gap: 1.2rem; font-size: 0.85rem; }
+            .main-header { padding: 0.8rem 5%; }
+            .logo { font-size: 1.5rem; }
+            .btn-nav { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+            .hero h1 { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">LUSACA<span>.</span></div>
-        <div class="nav-links">
+    <div class="top-bar">
+        <div class="top-bar-container">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="about.html">About Us</a>
-            <a href="contact.html" class="btn-nav">Get Quote</a>
         </div>
+    </div>
+
+    <nav class="main-header">
+        <div class="logo">LUSACA<span>.</span></div>
+        <a href="contact.html" class="btn-nav">Get Quote</a>
     </nav>
 
     <section class="hero">
         <h1>Your Independent Insurance Partner in Kenya</h1>
         <p>Lusaca is your trusted intermediary for General, Life, and Health Insurance. We negotiate competitive rates and guarantee peace of mind with fast claim settlements.</p>
         
-        <a href="#contact" class="btn-nav" style="background: var(--highlight); font-size: 1.1rem; padding: 1rem 3rem;">Get Expert Advice Now</a>
-        
         <div class="usp-grid">
-            <div class="usp-item"><i class="fas fa-gavel"></i> Claim Recovery Specialists</div>
-            <div class="usp-item"><i class="fas fa-certificate"></i> 15+ Years of Trust</div>
+            <div class="usp-item"><i class="fas fa-gavel"></i> Third-Party Claim Specialists</div>
+            <div class="usp-item"><i class="fas fa-certificate"></i> 15+ Years Experience</div>
             <div class="usp-item"><i class="fas fa-handshake"></i> Unbiased Negotiated Rates</div>
         </div>
     </section>
@@ -151,47 +164,23 @@
         </div>
     </div>
 
-    <section id="value-prop" class="value-prop">
+    <section class="value-prop">
         <h2>The Lusaca Intermediary Advantage</h2>
-        <p>We are your dedicated advocate. With 15 years in the Nairobi market, we provide fast involvement in new products and expert advice, always prioritizing your interests.</p>
+        <p>We are your dedicated advocate. With 15 years in the Nairobi market, we provide fast involvement in new products and expert advice, always prioritizing your interests over the insurance company's.</p>
 
         <div class="recovery-story">
-            <i class="fas fa-gavel" style="float: right; font-size: 1.5rem; color: var(--highlight);"></i>
-            <h4 style="margin-bottom: 0.5rem;">Specialist: Third-Party Claim Recovery</h4>
+            <h4>Specialist: Third-Party Claim Recovery <i class="fas fa-gavel"></i></h4>
             <p>Our hard work is proven in third-party claims. While others retreat, we pursue justice. Example: We successfully secured full recovery for a client's vehicle damage, even after the opposing insurer initially denied liability.</p>
         </div>
     </section>
 
-    <section id="contact" class="contact-cta">
-        <h2>Ready for Clear Insurance Advice?</h2>
-        <p style="color: var(--text-secondary);">Reach out for a zero-obligation consultation or quote.</p>
-        
-        <div class="cta-buttons-final">
-            <a href="tel:+254731493051" class="btn-call"><i class="fas fa-phone"></i> Call: +254 731 493 051</a>
-            <a href="mailto:lusacainsagency@gmail.com" class="btn-email"><i class="fas fa-envelope"></i> Email Us</a>
-        </div>
-    </section>
-
     <footer>
-        &copy; 2025 Lusaca Insurance Agency. All rights reserved. | Nairobi, Kenya.
+        <p>&copy; 2025 Lusaca Insurance Agency. All rights reserved. | Nairobi, Kenya.</p>
     </footer>
-
-    <script>
-        // Smooth scrolling for internal anchors
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
 
 </body>
 </html>
+
 
 
 
